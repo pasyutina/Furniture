@@ -32,7 +32,6 @@
             this.comboBoxAgent = new System.Windows.Forms.ComboBox();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.comboBoxProduct = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -45,12 +44,7 @@
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBoxAgents = new System.Windows.Forms.TextBox();
-            this.textBoxMagaz = new System.Windows.Forms.TextBox();
-            this.labelAgents = new System.Windows.Forms.Label();
-            this.labelMagaz = new System.Windows.Forms.Label();
-            this.Agents = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Magazins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,16 +83,6 @@
             this.comboBoxProduct.Size = new System.Drawing.Size(176, 29);
             this.comboBoxProduct.TabIndex = 80;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Furniture.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 297);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 79;
-            this.pictureBox1.TabStop = false;
-            // 
             // buttonDel
             // 
             this.buttonDel.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -108,7 +92,7 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Rounds Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonDel.Location = new System.Drawing.Point(651, 297);
+            this.buttonDel.Location = new System.Drawing.Point(651, 185);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(174, 37);
             this.buttonDel.TabIndex = 78;
@@ -123,7 +107,7 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Rounds Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonEdit.Location = new System.Drawing.Point(471, 297);
+            this.buttonEdit.Location = new System.Drawing.Point(471, 185);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(174, 37);
             this.buttonEdit.TabIndex = 77;
@@ -138,7 +122,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Rounds Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonAdd.Location = new System.Drawing.Point(291, 297);
+            this.buttonAdd.Location = new System.Drawing.Point(291, 185);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(174, 37);
             this.buttonAdd.TabIndex = 76;
@@ -154,9 +138,7 @@
             this.Client,
             this.Agent,
             this.Products,
-            this.Price,
-            this.Agents,
-            this.Magazins});
+            this.Price});
             this.listViewZakaz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewZakaz.ForeColor = System.Drawing.SystemColors.InfoText;
             this.listViewZakaz.FullRowSelect = true;
@@ -165,7 +147,7 @@
             this.listViewZakaz.Location = new System.Drawing.Point(196, 12);
             this.listViewZakaz.MultiSelect = false;
             this.listViewZakaz.Name = "listViewZakaz";
-            this.listViewZakaz.Size = new System.Drawing.Size(629, 279);
+            this.listViewZakaz.Size = new System.Drawing.Size(629, 167);
             this.listViewZakaz.TabIndex = 75;
             this.listViewZakaz.UseCompatibleStateImageBehavior = false;
             this.listViewZakaz.View = System.Windows.Forms.View.Details;
@@ -179,16 +161,17 @@
             // Client
             // 
             this.Client.Text = "Клиент";
+            this.Client.Width = 131;
             // 
             // Agent
             // 
             this.Agent.Text = "Менеджер";
-            this.Agent.Width = 89;
+            this.Agent.Width = 174;
             // 
             // Products
             // 
             this.Products.Text = "Вид товара";
-            this.Products.Width = 90;
+            this.Products.Width = 181;
             // 
             // labelMiddleName
             // 
@@ -223,66 +206,24 @@
             // Price
             // 
             this.Price.Text = "Цена";
-            this.Price.Width = 72;
+            this.Price.Width = 103;
             // 
-            // textBoxAgents
+            // pictureBox1
             // 
-            this.textBoxAgents.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAgents.Location = new System.Drawing.Point(14, 206);
-            this.textBoxAgents.Name = "textBoxAgents";
-            this.textBoxAgents.Size = new System.Drawing.Size(176, 29);
-            this.textBoxAgents.TabIndex = 83;
-            this.textBoxAgents.TextChanged += new System.EventHandler(this.textBoxAgents_TextChanged);
-            // 
-            // textBoxMagaz
-            // 
-            this.textBoxMagaz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMagaz.Location = new System.Drawing.Point(13, 262);
-            this.textBoxMagaz.Name = "textBoxMagaz";
-            this.textBoxMagaz.Size = new System.Drawing.Size(176, 29);
-            this.textBoxMagaz.TabIndex = 84;
-            this.textBoxMagaz.TextChanged += new System.EventHandler(this.textBoxMagaz_TextChanged);
-            // 
-            // labelAgents
-            // 
-            this.labelAgents.AutoSize = true;
-            this.labelAgents.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAgents.Location = new System.Drawing.Point(10, 182);
-            this.labelAgents.Name = "labelAgents";
-            this.labelAgents.Size = new System.Drawing.Size(182, 21);
-            this.labelAgents.TabIndex = 85;
-            this.labelAgents.Text = "Отчисления менеджеру";
-            // 
-            // labelMagaz
-            // 
-            this.labelMagaz.AutoSize = true;
-            this.labelMagaz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMagaz.Location = new System.Drawing.Point(10, 238);
-            this.labelMagaz.Name = "labelMagaz";
-            this.labelMagaz.Size = new System.Drawing.Size(166, 21);
-            this.labelMagaz.TabIndex = 86;
-            this.labelMagaz.Text = "Отчисления магазину";
-            // 
-            // Agents
-            // 
-            this.Agents.Text = "Отчисления менеджеру";
-            this.Agents.Width = 131;
-            // 
-            // Magazins
-            // 
-            this.Magazins.Text = "Отчисления магазину";
-            this.Magazins.Width = 146;
+            this.pictureBox1.Image = global::Furniture.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 185);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 79;
+            this.pictureBox1.TabStop = false;
             // 
             // Zakaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(833, 342);
-            this.Controls.Add(this.labelMagaz);
-            this.Controls.Add(this.labelAgents);
-            this.Controls.Add(this.textBoxMagaz);
-            this.Controls.Add(this.textBoxAgents);
+            this.ClientSize = new System.Drawing.Size(833, 238);
             this.Controls.Add(this.comboBoxAgent);
             this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.comboBoxProduct);
@@ -321,11 +262,5 @@
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.ColumnHeader Price;
-        private System.Windows.Forms.ColumnHeader Agents;
-        private System.Windows.Forms.ColumnHeader Magazins;
-        private System.Windows.Forms.TextBox textBoxAgents;
-        private System.Windows.Forms.TextBox textBoxMagaz;
-        private System.Windows.Forms.Label labelAgents;
-        private System.Windows.Forms.Label labelMagaz;
     }
 }

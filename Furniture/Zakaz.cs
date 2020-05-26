@@ -70,31 +70,7 @@ namespace Furniture
                 listViewZakaz.Items.Add(item);
             }
         }
-        void Deductions()
-        {
-            if (comboBoxAgent.SelectedItem != null && comboBoxProduct.SelectedItem != null)
-            {
-                AgentSet agent = Program.furn.AgentSet.Find(Convert.ToInt32(comboBoxAgent.SelectedItem.ToString().Split('.')[0]));
-                ProductSet product = Program.furn.ProductSet.Find(Convert.ToInt32(comboBoxProduct.SelectedItem.ToString().Split('.')[0]));
-                double magaz = product.Price * 0.05;
-                textBoxMagaz.Text = magaz.ToString("0.00");
-                if(agent.DealShare != null)
-                {
-                    double agents = product.Price * Convert.ToDouble(agent.DealShare) / 100.00;
-                    textBoxAgents.Text = agents.ToString("0.00");
-                }
-                else
-                {
-                    double agents = product.Price * 0.03;
-                    textBoxAgents.Text = agents.ToString("0.00");
-                }
-            }
-            else
-            {
-                textBoxAgents.Text = "";
-                textBoxMagaz.Text = "";
-            }
-        }
+        
         private void listViewAgent_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewZakaz.SelectedItems.Count == 1)
@@ -170,12 +146,10 @@ namespace Furniture
 
         private void textBoxAgents_TextChanged(object sender, EventArgs e)
         {
-            Deductions();
         }
 
         private void textBoxMagaz_TextChanged(object sender, EventArgs e)
         {
-            Deductions();
         }
     }
 }
